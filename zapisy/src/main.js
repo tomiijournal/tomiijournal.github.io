@@ -53,6 +53,8 @@ async function handleIframeLoad() {
     const nonEmptySegments = pathSegments.filter(segment => segment !== '');
     const filenameSegment = nonEmptySegments[nonEmptySegments.length - 1];
 
+    console.log(filenameSegment)
+
     if (filenameSegment!=="onlyrender.html") {
       await loadMarkdown("intro")
     }
