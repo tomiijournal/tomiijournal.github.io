@@ -30,26 +30,41 @@ async function fetchText(url) {
   }
 }
 
-async function handleIframeLoad() {
-  const filename = GetURLParameter("filename");
-
-  if (!filename) {
-    alert("No filename specified!")
-  }
-
+async function loadMarkdown(filename) {
   const markdownText = await fetchText("src/"+filename+".md");
   if (markdownText) {
     $previewIframe.contentDocument.body.innerHTML = marked.parse(markdownText);
     console.log('Markdown rendered');
   } else {
-    alert("Filename was not found!");
+    const notfoundMarkdown = await fetchText("src/nofilefound.md");
+    $previewIframe.contentDocument.body.innerHTML = marked.parse(notfoundMarkdown);
   }
 }
 
-filenameinput.addEventListener("keyup", ({key}) => {
-    if (key === "Enter") {
-        console.log(filenameinput.value)
-        window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
-    }
-})
+async function handleIframeLoad() {
+  const filename = GetURLParameter("filename");
+
+  if (filename) {
+    await loadMarkdown(filename)
+  } else {
+    await loadMarkdown("intro")
+  }
+}
+
+const pathSegments = window.location.pathname.split('/');
+const nonEmptySegments = pathSegments.filter(segment => segment !== '');
+const filenameSegment = nonEmptySegments[nonEmptySegments.length - 1];
+
+console.log(filenameSegment)
+
+if (filenameSegment!=="onlyrender.html") {
+  console.log("Renderinng...")
+  filenameinput.addEventListener("keyup", ({key}) => {
+      if (key === "Enter") {
+          console.log(filenameinput.value)
+          window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
+      }
+  })
+}
+
 $previewIframe.addEventListener('load', handleIframeLoad);
