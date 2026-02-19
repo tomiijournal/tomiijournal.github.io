@@ -1,3 +1,5 @@
+##
+
 const $previewIframe = document.getElementById('iframe');
 const filenameinput = document.getElementById("filenameinput")
 
@@ -47,7 +49,13 @@ async function handleIframeLoad() {
   if (filename) {
     await loadMarkdown(filename)
   } else {
-    await loadMarkdown("intro")
+    const pathSegments = window.location.pathname.split('/');
+    const nonEmptySegments = pathSegments.filter(segment => segment !== '');
+    const filenameSegment = nonEmptySegments[nonEmptySegments.length - 1];
+
+    if (filenameSegment!=="onlyrender.html") {
+      await loadMarkdown("intro")
+    }
   }
 }
 
