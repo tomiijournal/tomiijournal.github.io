@@ -1,4 +1,3 @@
-##
 
 const $previewIframe = document.getElementById('iframe');
 const filenameinput = document.getElementById("filenameinput")
@@ -53,9 +52,8 @@ async function handleIframeLoad() {
     const nonEmptySegments = pathSegments.filter(segment => segment !== '');
     const filenameSegment = nonEmptySegments[nonEmptySegments.length - 1];
 
-    console.log(filenameSegment)
-
     if (filenameSegment!=="onlyrender.html") {
+      console.log(filenameSegment + " Rendering intro")
       await loadMarkdown("intro")
     }
   }
@@ -72,7 +70,7 @@ if (filenameSegment!=="onlyrender.html") {
   filenameinput.addEventListener("keyup", ({key}) => {
       if (key === "Enter") {
           console.log(filenameinput.value)
-          window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
+          $previewIframe.src = location.origin + location.pathname+"?filename="+filenameinput.value;
       }
   })
 }
