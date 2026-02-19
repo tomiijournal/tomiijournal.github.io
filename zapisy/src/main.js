@@ -75,4 +75,6 @@ if (filenameSegment!=="onlyrender.html") {
   })
 }
 
+console.log(window.location.href)
+
 $previewIframe.addEventListener('load', handleIframeLoad);
