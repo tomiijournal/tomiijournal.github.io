@@ -70,7 +70,7 @@ if (filenameSegment!=="onlyrender.html") {
   filenameinput.addEventListener("keyup", ({key}) => {
       if (key === "Enter") {
           console.log(filenameinput.value)
-          $previewIframe.src = location.origin + location.pathname+"?filename="+filenameinput.value;
+          window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
       }
   })
 }
