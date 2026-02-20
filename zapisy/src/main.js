@@ -50,6 +50,8 @@ async function handleIframeLoad() {
     return;
   }
 
+  console.log("AAA test ze update je novy protoze jsem zoufaly")
+
   isFirstLoad=false;
 
   const filename = GetURLParameter("filename");
