@@ -4,6 +4,8 @@ const filenameinput = document.getElementById("filenameinput")
 
 let isFirstLoad = true;
 
+$previewIframe.src = '';
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
