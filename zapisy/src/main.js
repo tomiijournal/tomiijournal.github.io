@@ -50,7 +50,7 @@ async function handleIframeLoad() {
     return;
   }
 
-  isFirstLoad=true;
+  isFirstLoad=false;
 
   const filename = GetURLParameter("filename");
 
