@@ -2,6 +2,8 @@
 const $previewIframe = document.getElementById('iframe');
 const filenameinput = document.getElementById("filenameinput")
 
+let isFirstLoad = true;
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
@@ -43,6 +45,11 @@ async function loadMarkdown(filename) {
 }
 
 async function handleIframeLoad() {
+  if (!isFirstLoad) {
+    console.log("Not first loader, returning....");
+    return;
+  }
+
   const filename = GetURLParameter("filename");
 
   if (filename) {
