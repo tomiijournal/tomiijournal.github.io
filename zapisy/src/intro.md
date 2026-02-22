@@ -15,7 +15,7 @@
 
 - Ano, tohle je stránka kde se můžete dívat na jakýkoliv zápis bez přihlašovaní jenom za pomocí lehkého vyhledaní či odkazu
 
-**[Demo zobrazení zápisku](https://www.itzzztomas.xyz/zapisy/onlyrender.html?filename=1002)**
+<a href="#" onclick="sendRedirectMessage('https://www.itzzztomas.xyz/zapisy?filename=1002'); return false;">Demo zobrazení zápisku</a>
 
 ## Budoucí funkce zápiskového rendereru:
 - Účinný vyhledávač všech zápisků

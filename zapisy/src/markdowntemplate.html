@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style/markdown.css">
 
+    <script>
+        function sendRedirectMessage(url) {
+            parent.postMessage({ action: 'redirect', url: url }, '*');
+        }
+    </script>
 </head>
 <body>
  <h1>Markdown renderer iframe preset</h1>

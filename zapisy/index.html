@@ -4,22 +4,33 @@
         <link rel="stylesheet" href="style/main.css">
     </head>
     <body class="websitebackground">
+        <div class="wrapper">
+            <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-
-        <div class="mainheader">
-            <h1 class="textmainheader">tomass personal website :P</h1>
-            <div class="input-container-redirect">
-                <input type="text" id="filenameinput" placeholder="File name...">
+            <div class="mainheader">
+                <h1 class="textmainheader">tomass personal website :P</h1>
+                <div class="input-container-redirect">
+                    <input type="text" id="filenameinput" placeholder="File name...">
+                </div>
             </div>
+
+
+            <iframe class="iframecontent" src="" frameborder="0" title="markdown" id="iframe" sandbox="allow-same-origin allow-scripts"></iframe>         
+
+        
+            <script src="src/main.js"></script>
         </div>
 
-
-        <div class="iframeholder">
-            <iframe src="" frameborder="0" title="markdown" id="iframe" sandbox="allow-same-origin allow-scripts"></iframe> 
-        </div>
-
-    
-        <script src="src/main.js"></script>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.origin === location.origin) {
+                console.log("Received redirection request")
+                if (event.data.action === 'redirect') {
+                    const targetUrl = event.data.url;
+                    window.location.href = targetUrl;
+                }
+            }
+        });
+    </script>
     </body>
 </html> 

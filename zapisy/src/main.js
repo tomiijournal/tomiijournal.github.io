@@ -4,7 +4,20 @@ const filenameinput = document.getElementById("filenameinput")
 
 let isFirstLoad = true;
 
-$previewIframe.src = 'https://www.itzzztomas.xyz/zapisy/src/markdowntemplate.html';
+$previewIframe.src = location.origin + location.pathname+"src/markdowntemplate.html";
+
+function ResizeIframe()
+{
+  try {
+    const iframeDoc = $previewIframe.contentDocument || $previewIframe.contentWindow.document;
+    console.log(iframeDoc)
+    const contentHeight = iframeDoc.body.scrollHeight;
+
+    $previewIframe.style.height = `${contentHeight + 20}px`; 
+  } catch (error) {
+    console.error('Failed to resize iframe:', error);
+  }
+}
 
 function GetURLParameter(sParam)
 {
@@ -38,12 +51,14 @@ async function fetchText(url) {
 async function loadMarkdown(filename) {
   const markdownText = await fetchText("src/"+filename+".md");
   if (markdownText) {
-    $previewIframe.contentDocument.body.innerHTML = marked.parse(markdownText);
+    $previewIframe.contentDocument.body.innerHTML = await marked.parse(markdownText);
     console.log('Markdown rendered');
   } else {
     const notfoundMarkdown = await fetchText("src/nofilefound.md");
-    $previewIframe.contentDocument.body.innerHTML = marked.parse(notfoundMarkdown);
+    $previewIframe.contentDocument.body.innerHTML = await marked.parse(notfoundMarkdown);
   }
+
+  ResizeIframe();
 }
 
 async function handleIframeLoad() {
@@ -51,9 +66,6 @@ async function handleIframeLoad() {
     console.log("Not first loader, returning....");
     return;
   }
-
-  console.log("AAA test ze update je novy protoze jsem zoufaly")
-
   isFirstLoad=false;
 
   const filename = GetURLParameter("filename");
@@ -70,24 +82,20 @@ async function handleIframeLoad() {
       await loadMarkdown("intro")
     }
   }
+  ResizeIframe()           
 }
 
 const pathSegments = window.location.pathname.split('/');
 const nonEmptySegments = pathSegments.filter(segment => segment !== '');
 const filenameSegment = nonEmptySegments[nonEmptySegments.length - 1];
 
-console.log(filenameSegment)
-
 if (filenameSegment!=="onlyrender.html") {
-  console.log("Renderinng...")
   filenameinput.addEventListener("keyup", ({key}) => {
       if (key === "Enter") {
-          console.log(filenameinput.value)
-          window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
+        console.log(filenameinput.value)
+        window.location.href = location.origin + location.pathname+"?filename="+filenameinput.value;
       }
   })
 }
-
-console.log(window.location.href)
 
 $previewIframe.addEventListener('load', handleIframeLoad);
