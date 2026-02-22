@@ -4,7 +4,7 @@ const filenameinput = document.getElementById("filenameinput")
 
 let isFirstLoad = true;
 
-$previewIframe.src = 'https://www.itzzztomas.xyz/zapisy/onlyrender.html';
+$previewIframe.src = 'https://www.itzzztomas.xyz/zapisy/style/markdowntemplate.html';
 
 function GetURLParameter(sParam)
 {
