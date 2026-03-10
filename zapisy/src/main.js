@@ -19,6 +19,17 @@ function ResizeIframe()
   }
 }
 
+function addToIframeHead() {
+
+  const iframeDoc = $previewIframe.contentDocument || $previewIframe.contentWindow.document;
+  const script = iframeDoc.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'; // Replace with your script path
+  script.onload = () => {
+    console.log('Script loaded in iframe!');
+  };
+  iframeDoc.head.appendChild(script);
+}
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
@@ -53,6 +64,7 @@ async function loadMarkdown(filename) {
   if (markdownText) {
     $previewIframe.contentDocument.body.innerHTML = await marked.parse(markdownText);
     console.log('Markdown rendered');
+    addToIframeHead();
   } else {
     const notfoundMarkdown = await fetchText("src/nofilefound.md");
     $previewIframe.contentDocument.body.innerHTML = await marked.parse(notfoundMarkdown);
