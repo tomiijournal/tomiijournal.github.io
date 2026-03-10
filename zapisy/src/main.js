@@ -13,7 +13,7 @@ function ResizeIframe()
     console.log(iframeDoc)
     const contentHeight = iframeDoc.body.scrollHeight;
 
-    $previewIframe.style.height = `${contentHeight + 20}px`; 
+    $previewIframe.style.height = `${contentHeight + 40}px`; 
   } catch (error) {
     console.error('Failed to resize iframe:', error);
   }
