@@ -23,11 +23,12 @@ function ResizeIframe()
 function addToIframeHead() {
 
   const iframeDoc = $previewIframe.contentDocument || $previewIframe.contentWindow.document;
+  const imagesize = iframeDoc.createElement('script');
+  imagesize.src = location.origin + location.pathname+"src/loadimage.js"
+  iframeDoc.head.appendChild(imagesize);
+
   const mathjax = iframeDoc.createElement('script');
   mathjax.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'; // Replace with your script path
-  mathjax.onload = () => {
-    console.log('Mathjax loaded in iframe!');
-  };
   iframeDoc.head.appendChild(mathjax);
 }
 
@@ -110,5 +111,10 @@ if (filenameSegment!=="onlyrender.html") {
       }
   })
 }
+
+document.addEventListener('imagesReady', () => {
+  console.log('All images loaded');
+  ResizeIframe();
+});
 
 $previewIframe.addEventListener('load', handleIframeLoad);
