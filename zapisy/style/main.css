@@ -42,7 +42,13 @@ h1, p {color: azure; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 .input-container-redirect {
     margin-left: auto; /* Push the input to the right */
+    width: auto;
     margin-right: 20px;
+}
+
+
+.input-container-redirect button {
+
 }
 
 .input-container-redirect input {

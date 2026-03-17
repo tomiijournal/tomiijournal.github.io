@@ -2,6 +2,14 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/main.css">
+
+        <script>
+            function printIframe() {
+                const contentIframe =  document.getElementById('zapisstore').contentWindow; 
+               contentIframe.focus();
+               contentIframe.print();
+            }
+        </script>
     </head>
     <body class="websitebackground">
         <div class="wrapper">
@@ -10,12 +18,13 @@
             <div class="mainheader">
                 <h1 class="textmainheader">Zapisky Wiki - Demo</h1>
                 <div class="input-container-redirect">
+                    <button type="button" id="printBtn" onclick="printIframe()">Print</button>
                     <input type="text" id="filenameinput" placeholder="File name...">
                 </div>
             </div>
 
 
-            <iframe class="iframecontent" src="" frameborder="0" title="markdown" id="iframe" sandbox="allow-same-origin allow-scripts"></iframe>         
+            <iframe name="zapisstore" class="iframecontent" src="" frameborder="0" title="markdown" id="zapisstore" sandbox="allow-same-origin allow-scripts allow-modals"></iframe>         
 
         
             <script src="src/main.js"></script>

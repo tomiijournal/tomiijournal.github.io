@@ -1,1 +1,4 @@
-h1, p, ul, li, h2, h3, h4, h5, h6, th, tr, table, code {color: azure; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+p, ul, li, th, tr {color: azure; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+h1, h2, h3, h4, h5, h6, hr {color: rgb(0, 191, 255); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+code, em {color: rgb(183, 197, 197); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+table {color: rgb(0, 170, 255); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}

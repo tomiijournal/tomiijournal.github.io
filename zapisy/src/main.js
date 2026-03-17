@@ -1,5 +1,6 @@
 
-const $previewIframe = document.getElementById('iframe');
+const $previewIframe = document.getElementById('zapisstore');
+const $printBtn = document.getElementById('printBtn');
 const filenameinput = document.getElementById("filenameinput")
 
 let isFirstLoad = true;
@@ -22,12 +23,12 @@ function ResizeIframe()
 function addToIframeHead() {
 
   const iframeDoc = $previewIframe.contentDocument || $previewIframe.contentWindow.document;
-  const script = iframeDoc.createElement('script');
-  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'; // Replace with your script path
-  script.onload = () => {
-    console.log('Script loaded in iframe!');
+  const mathjax = iframeDoc.createElement('script');
+  mathjax.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML'; // Replace with your script path
+  mathjax.onload = () => {
+    console.log('Mathjax loaded in iframe!');
   };
-  iframeDoc.head.appendChild(script);
+  iframeDoc.head.appendChild(mathjax);
 }
 
 function GetURLParameter(sParam)
