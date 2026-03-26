@@ -5,7 +5,8 @@
 
         <script>
             function printIframe() {
-                const contentIframe =  document.getElementById('zapisstore').contentWindow; 
+                const contentIframe =  document.getElementById('zapisstore').contentWindow
+                contentIframe.title = GetURLParameter("filename");
                contentIframe.focus();
                contentIframe.print();
             }
