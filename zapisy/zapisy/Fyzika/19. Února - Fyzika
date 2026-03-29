@@ -1,0 +1,115 @@
+# Tíhová síla
+
+### F = ma
+
+## Fg = mg
+
+## Tíha tělesa G
+- Tíha tělesa G je důsledkem tíhové síly Fg, kterou působí země na těleso.
+
+- **Platí, že:** Fg = G = m*g
+
+# Smykové tření - třecí síla
+
+**Na ZŠ jsme poznali:**
+1. **Třecí síla závisí na materiálu a drsnosti stykových ploch**
+2. Třecí síla nezávisí na velikosti stykových ploch
+3. Třecí síla nezávisí na velikosti či rychlosti tělesa
+4. Pro třecí sílu platí **F<sub>t</sub>=f*F<sub>n</sub>**<br>
+>f....součinitel smykového tření (materiál)<br>
+>f = F<sub>t</sub>/F<sub>n</sub> (F<sub>n</sub> = F<sub>g</sub>)
+
+## Příklady:
+
+1. Těleso, které bylo na začátku v klidu, se začalo působením stálé síly 20N pohybovat rovnoměrně zrychleně a urazilo při tom za 10s dráhu 25m. Jaká je jeho hmotnost?
+
+```
+F = 20N
+t = 10s
+s = 25m
+a = ? [s^2]
+________________________
+
+s = at^2/2 F
+2s = at^2
+a = 2s/t^2
+a = 2.25/10^2
+    _________
+```
+
+
+2. Automobil o hmotnosti 600kg se rozjíždí z klidu po dobu 20s. Jak velké rychlosti přitom dosáhne, potřebuje-li z celkové tažné síly motoru 400N k překonání tření a odporu vzduchu sílu 100N.
+
+```
+m=600kg
+F₁​=400N,F₂=100N
+v = ? [m/s]
+________________________
+
+F​=F₁​−F₂=400N−100N=300N
+
+a= F/m ​​=600kg/300N​=0.5m/s2
+
+v=a⋅t=0.5m/s2⋅20s=10m/s
+
+v = 10 m/s
+    ______
+```
+
+3. Jaká je hmotnost rakety, která dosáhne za 150s rychlosti 6km/s. Tažná síla motorů je 320 kN. Odporové síly a úbytek hmotnosti nezapočítáváme.
+
+```
+v = 6000 m/s
+t = 150s
+F = 320 000kN
+m = ? [t]
+
+______________
+
+F = m * a
+
+a = v/t
+a = 6000/150
+a = 40m/s^2
+
+m = F/a
+
+m = 320 000 / 40 
+m = 8000kg = 8t
+           ______
+```
+
+4. Míč o hmotnosti 800g byl vyhozen 4m/s,jak velkou má hybnost? Jak velkým impulzem síly byl do pohybu uveden?
+
+```
+v = 4m/S
+m = 800g = 0.8kg
+p = ? [kg*m/s]
+I = ? [N*s]
+
+_____________
+
+p = m*v = hybnost tělesa
+
+p = 0.8*3,2
+p = 3.2 kg*m/s
+    __________
+
+
+p = I
+I = 3,2 N*s
+    _______
+```
+
+!!! **Písemka 26/27 - Příklady na zákon síly** !!!
+
+Vzorce:
+
+```
+a = F/m
+a = v/t => v = ? => t = ?
+w = at^2/2 => a = ? => t => ?
+
+v = g*t
+s = g*t^2/2
+```
