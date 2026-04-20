@@ -1,1 +1,51 @@
-404: Not Found
+# Křesťanství
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Christian_cross.svg/960px-Christian_cross.svg.png" alt="symbol křesťanství" width="100"/><br><br>
+*Symbol křesťanství - kříž*
+
+
+- lat. christianus = pomazaný
+- zhruma 2.mld věřících na všechn kontinentech (nejrozšířenější)
+- křesťanství je **monoteistický systém** - víra v jednoho boha
+- **příslušnost** ke křesťanství **není dána** původem či narození ale **křtem**
+- křesťanství vyslo z judaismu
+- přesťanství vycházi z učení a života **Ježíše Krista Nezaretského**
+
+## Obecná charakteristika
+- základem křesťanství je tvrzení, že Bůh - **tvůrce všecho existujícího** - seslal lidem svého syna, **Ježíše Krista**, aby je **vykoupil** svou smrtí na kříži z **věčného zatracení**, do kterého upadli vinou prvních lidí, **Adama a Evy**
+- pozemský život chápe přípravu na život skutečný - posmrtný
+- Kristovi následovnící v čele s apoštoly šířilo učení tom, že Bůh Ježíše vzkřísil z mrtvých
+- **vznikali obce věřícíh**, nejprve v Jeruzalému a židovského prostředí, později i v prostředí pohanském v celé římské řísi
+- pro **věříci v Krista** se ujal název **Křesťané**
+
+### Důležité události:
+1. roku 313 římský císař Konstantin tvz. ediktem milánským zrovnoprávil křesťanství s jinými náboženskými systémy.
+2. na přelomu 4. a 5. století přeloží Jeronýrn Bibli (překlad: kniha) do latiny- tneto překlad se jmenuje VUláta a vycházejí z něho překlady do dalších jazyků
+
+
+## Hlavní symboly:
+### Kříž
+- nejznáměnjší křesťanský symbol
+- vychází ze způsobu Kristova umučení (ukřížování)
+
+### Ichtus - Ryba
+- mnoho kristových uředníků bylo rybáři
+- Kristus nazýval apoštoly rybáři lidí
+- tento symbol spíše v archaických dobách, dnes již tolik ne
+
+### Triquetra
+- latisnké sloo pro "trojhranný"
+- starobylý symbol Trojice - tři navzájem protkané oblouky, symbolizují to, ž Otec, Syn a Duch svatý jsou tři rozdílné a stejné osoby a zároveň jeden nedělitelný Bůh
+
+## Konstantin a Metoděj
+- přisli z Byzantije
+
+## Bible
+### Starý zákon
+- 2. st. př. nl
+- základ judaismu
+- řídí se jím žídé i křesťané
+### Nový zákon
+- 1. století n.l.
+- křesťanská část bible
+- obsahuje: Evangelia
