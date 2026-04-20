@@ -25,7 +25,7 @@ https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motioncontroltip
 
 ### Popis ztráty vířivými proudy
 
-<img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2F1.bp.blogspot.com%2F-2-58NtAFcNI%2FV0CcSEceW7I%2FAAAAAAAAA9A%2FZUMLWy02n54TA3qHWD13A1YNtc8zWLyrQCK4B%2Fs1600%2Feddy%252Bcurrent.jpg&sp=1776675278T0a9306c2ffcdfd1c3f8be083b8985910e4ebff7ac381bd15528b24c0bb24406e" alt="drawing" width="600"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Laminated_core_eddy_currents_2.svg/1920px-Laminated_core_eddy_currents_2.svg.png" alt="drawing" width="600"/>
 
 *obrázek 1 = jádro je složeno s jednoho kusu železa, ztráza vířivými proudy je větší*<br>
 *obrázek 2 = jádro je složeno s více menších plechů (laminování jádra), ztráta vířivými proudy se minimalizuje*
